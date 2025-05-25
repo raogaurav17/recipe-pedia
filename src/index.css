@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,157 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #A47449;
+  color: #FFF9E3;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.header{
+  height: 14vh;
+  width: 100vw;
+  display: block;
+}
+
+.header-title{
+  height: 8vh;
+  width: inherit;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  color:#A47449
+}
+
+.logo{
+  height: 5vh;
+  width: 5vh;
+  padding-right: 5px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: inherit;
+  background-color: #4E342E;
+  width: inherit;
+  height: 6vh;
+}
+
+.searchbox{
+  display: flex;
+  align-items: center;
+}
+
+
+#search{
+  height: 5vh;
+  width: 40vw;
+  border-radius: 1vh 0 0 1vh;
+  padding-left: 5px;
+  font-weight: 700;
+  border-color: #A47449;
+  border-width: 0.5vh;
+  border-right-width:0 ;
+  border-style: solid;
+  background-color: #FFF9E3;
+}
+
+.search-icon{
+  background-color: wheat;
+  border-color: #A47449;
+  border-radius: 0 1vh 1vh 0;
+  width: 4vw;
+  height: 5vh;
+  border-width: 0.5vh;
+  border-left-width:0 ;
+  border-style: solid;
+  font-weight: 700;
+}
+
+.cuisines {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+
+
+.cuisine{
+  height: 3.5vh;
+  background-color: #4E342E; 
+  padding: 0.2vh 0.2vh;
+  color: #FFF9E3; 
+  font-size: 1rem;
+  border: none;
+  border-bottom: 0.5vh solid transparent;
+  cursor: pointer;
+  position: relative; 
+  overflow: hidden; 
+  transition: background-color 0.3s ease;
+}
+
+.cuisine::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.5vh;
+  background-color: wheat;
+  transition: width 0.3s ease;
+}
+
+.cuisine:hover::after,
+.cuisine.active::after {
+  width: 100%;
+}
+
+.cuisine:hover,
+.cuisine.active {
+  background-color: #5D4037;
+}
+
+.recipe-container{
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.recipe-container h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color:#4E342E;
+} 
+
+.recipe-box{
+  min-width: 200px;
+  padding-left: 1vh;
+  height: auto;
+  width: 20vw;
+  background-color: #FFF9E3;
+  color:#A47449;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 5vh;
+  border-radius: 1vmin;
+  padding:0 1vh;
+}
+
+.recipe-box-img {
+  max-width: 98.5%;
+  height: auto;
+  display: block;
+  padding-top: 8px;;
+  margin-left: auto;
+  margin-right: auto;
 }
