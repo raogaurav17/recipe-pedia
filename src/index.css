@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1.1rem;
 }
 
 body {
@@ -51,18 +52,22 @@ nav{
   width: inherit;
   background-color: #4E342E;
   width: inherit;
-  height: 6vh;
+  flex-wrap: wrap;
 }
 
-.searchbox{
+.searchbar {
   display: flex;
   align-items: center;
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+  margin: 10px 0;
 }
 
 
 #search{
   height: 5vh;
-  width: 40vw;
+  width: 70%;
   border-radius: 1vh 0 0 1vh;
   padding-left: 5px;
   font-weight: 700;
@@ -71,25 +76,34 @@ nav{
   border-right-width:0 ;
   border-style: solid;
   background-color: #FFF9E3;
+  margin-left: auto;
+}
+
+#search:focus{
+  outline: none;
 }
 
 .search-icon{
   background-color: wheat;
   border-color: #A47449;
   border-radius: 0 1vh 1vh 0;
-  width: 4vw;
+  width: 40px;
   height: 5vh;
   border-width: 0.5vh;
   border-left-width:0 ;
   border-style: solid;
   font-weight: 700;
+  margin-right: auto;
 }
 
 .cuisines {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 50vw;
+  width: 100%;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 10px 0;
 }
 
 
@@ -105,6 +119,7 @@ nav{
   position: relative; 
   overflow: hidden; 
   transition: background-color 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .cuisine::after {
@@ -152,9 +167,14 @@ nav{
   color:#A47449;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-bottom: 5vh;
+  margin: 5vmin 3vmin;
   border-radius: 1vmin;
   padding:0 1vh;
+  transition: width 0.3s ease;
+}
+
+.recipe-box p,  span{
+  font-size:0.81rem;
 }
 
 .recipe-box-img {
@@ -165,3 +185,8 @@ nav{
   margin-left: auto;
   margin-right: auto;
 }
+.recipe-box:hover{
+  width: 21vw;
+  min-width: 210px;
+}
+

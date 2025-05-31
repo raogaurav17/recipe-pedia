@@ -19,7 +19,7 @@ export default function Header({ onSearch }) {
         <h1>Recipe-Pedia</h1>
       </div>
       <nav>
-        <div className="searchbar">
+        <span className="searchbar">
           <input
             type="text"
             placeholder="Search Recipe"
@@ -37,7 +37,7 @@ export default function Header({ onSearch }) {
           >
             <FaSearch />
           </button>
-        </div>
+        </span>
         <div className="cuisines">
           <button className="cuisine" onClick={() => onSearch('Indian')}>Indian</button>
           <button className="cuisine" onClick={() => onSearch('Italian')}>Italian</button>

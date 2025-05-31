@@ -14,7 +14,17 @@ function App() {
         `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=12&apiKey=${apiKey}`
       );
       const data = await res.json();
-      setRecipes(data.results || []);
+
+      const detailedRecipes = await Promise.all(
+        data.results.map(async (recipe) => {
+          const res = await fetch(
+            `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${apiKey}`
+          );
+          return await res.json();
+        })
+      );
+
+      setRecipes(detailedRecipes);
     } catch (error) {
       console.error('Error searching recipes:', error);
     }
