@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🍲 Recipe-Pedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub Stars](https://img.shields.io/github/stars/raogaurav17/recipe-pedia?style=social)](https://github.com/raogaurav17/recipe-pedia)
+![React](https://img.shields.io/badge/React-19-blue?logo=react)
+![API](https://img.shields.io/badge/API-Spoonacular-orange)
+[![Deploy on Netlify](https://img.shields.io/badge/Live%20Demo-Netlify-success?logo=netlify)](https://your-netlify-app-url.netlify.app/)
 
-## Available Scripts
+**Recipe-Pedia** is a modern and responsive **React** application that allows users to effortlessly search, discover, and explore thousands of recipes from around the world. Powered by the [Spoonacular API](https://spoonacular.com/food-api), the app delivers detailed information including ingredients, preparation steps, and summaries — all within an elegant user interface.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 **Search Recipes:** Instantly find recipes by name or keyword.
+- 🍛 **Cuisine Filters:** Quickly explore Indian, Italian, Chinese, and Japanese recipes with a single click.
+- 📋 **Recipe Details Sidebar:** View ingredients, summaries, and step-by-step instructions without leaving the page.
+- 📱 **Responsive UI:** Seamlessly usable on desktop, tablet, and mobile devices.
+- 🎨 **Modern Design:** Built using `lucide-react` icons and styled with minimal, accessible UI patterns.
+- 🔗 **Connect With Me:**  
+  [Instagram](https://www.instagram.com/gaurav_rao17/) • [GitHub](https://github.com/raogaurav17/) • [LinkedIn](https://www.linkedin.com/in/ydv17gaurav/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ✅ Prerequisites
 
-### `npm run build`
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⚙️ Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/raogaurav17/recipe-pedia.git
+   cd recipe-pedia
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Set up API Key:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   - Create a `.env` file in the root directory:
 
-## Learn More
+     ```
+     REACT_APP_SPOONACULAR_KEY=your_spoonacular_api_key
+     ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Run the development server:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+   Visit [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+recipe-pedia/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.jsx
+│   ├── index.js
+│   ├── index.css
+│   └── Components/
+│       ├── Header.jsx
+│       ├── Footer.jsx
+│       ├── Home.jsx
+│       ├── RecipeBox.jsx
+│       └── Sidebar.jsx
+└── .env
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧰 Technologies Used
 
-### Advanced Configuration
+- ⚛️ React 19
+- 🥘 Spoonacular API
+- 🎨 `lucide-react` (icon library)
+- 💅 `react-icons`
+- 🧼 `dompurify` (safe rendering of HTML)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is for **educational and personal use only**.
+Licensed under the [MIT License](LICENSE).
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🙌 Author
+
+Made with ❤️ by **Gaurav**
+Feel free to reach out on [LinkedIn](https://www.linkedin.com/in/ydv17gaurav/) or check out more on [GitHub](https://github.com/raogaurav17).
+
+---

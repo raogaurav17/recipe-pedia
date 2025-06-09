@@ -1,55 +1,41 @@
+import { useState } from "react";
+import RecipeBox from "./RecipeBox";
+import Sidebar from "./Sidebar";
+
 function Home({recipes}){
+
+  const [sidebarOpen, setsidebarOpen] = useState(false);
+  const [sidebarContent, setsidebarContent] = useState("");
+
+  const openSidebar = (content) => {
+    setsidebarContent(content);
+    setsidebarOpen(true);
+  }
+
+  const closeSidebar = () => {
+    if(sidebarOpen === true){
+      setsidebarContent("");
+      setsidebarOpen(false);
+    }
+  }
+
+
   return (
     <>
-        <div className="recipe-container">
+        <div className="recipe-container" onClick={closeSidebar}>
           {recipes.length === 0?
             (<p>No Recipes found</p>) 
             :(recipes.map((recipe) => {
               return(
-                <div className="recipe-box">
-                  <h2>{recipe.title}</h2>
-                  <img className="recipe-box-img" src = {recipe.image} alt = {recipe.title}/>
-                  <p>Preparation Time: {recipe.readyInMinutes}</p>
-                  <p>Price per serving: ₹{(recipe.pricePerServing  * 0.835).toFixed(2)}</p>
-                  <p>
-                    {recipe.diets.length !== 0 ? (
-                      <>
-                        <span>Diets: </span>
-                        {recipe.diets.map((diet, index) => (
-                          <span key={index}>
-                            {diet}
-                            {index < recipe.diets.length - 1 ? ', ' : ''}
-                          </span>
-                        ))}
-                      </>
-                    ) : (
-                      ''
-                    )}
-                  </p>
-
-
-                  <p>
-                    {recipe.cuisines.length !== 0 ? (
-                      <>
-                        <span>Cuisines: </span>
-                        {recipe.cuisines.map((cuisine, index) => (
-                          <span key={index}>
-                            {cuisine}
-                            {index < recipe.cuisines.length - 1 ? ', ' : ''}
-                          </span>
-                        ))}
-                      </>
-                    ) : (
-                      ''
-                    )}
-                  </p>
-
-
-              </div>
+                <RecipeBox key={recipe.id} recipe = {recipe} openSidebar={openSidebar}/>
               )
-            })
+            })      
           )}
         </div>
+
+        {sidebarOpen && 
+          <Sidebar sidebarContent = {sidebarContent}/>
+        }
 
     </>
   )

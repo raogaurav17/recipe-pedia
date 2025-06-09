@@ -34,7 +34,7 @@ function App() {
     const fetchRandomRecipes = async () => {
       try {
         const res = await fetch(
-          `https://api.spoonacular.com/recipes/random?number=4&apiKey=${apiKey}`
+          `https://api.spoonacular.com/recipes/random?number=12&apiKey=${apiKey}`
         );
         const data = await res.json();
         setRecipes(data.recipes || []);

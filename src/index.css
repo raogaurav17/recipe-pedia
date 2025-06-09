@@ -5,6 +5,11 @@
   font-size: 1.1rem;
 }
 
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto; 
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,6 +19,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #A47449;
   color: #FFF9E3;
+  width: 100%;
+  overflow-y: auto;
 }
 
 code {
@@ -36,7 +43,11 @@ code {
   justify-content: center;
   align-items: center;
   background-color: bisque;
-  color:#A47449
+  color:#A47449;
+}
+
+.header-title h1{
+  font-size: 2.2rem;
 }
 
 .logo{
@@ -111,6 +122,7 @@ nav{
   height: 3.5vh;
   background-color: #4E342E; 
   padding: 0.2vh 0.2vh;
+  padding-bottom: 25px;
   color: #FFF9E3; 
   font-size: 1rem;
   border: none;
@@ -149,6 +161,7 @@ nav{
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: baseline;
+  margin-bottom: auto;
 }
 
 .recipe-container h2 {
@@ -173,8 +186,11 @@ nav{
   transition: width 0.3s ease;
 }
 
-.recipe-box p,  span{
+.recipe-box p{
   font-size:0.81rem;
+}
+.recipe-box span{
+  font-size:0.7rem;
 }
 
 .recipe-box-img {
@@ -190,3 +206,151 @@ nav{
   min-width: 210px;
 }
 
+
+
+.sidepanel{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 70%;
+  max-width: 500px;
+  background-color: #D4A373;
+  color:#4E342E;
+  overflow-y: auto;
+}
+.sidepanel h1{
+  text-align: center;
+
+}
+
+
+.buttons-div{
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: space-evenly;
+}
+
+.sidepanel-Button{
+  border: none;
+  height: 1.5rem;
+  padding: 0 2%;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px 2px #4E342E;
+  margin: 10px;
+}
+
+.summary, .instructions{
+  width: 90%;
+  text-align: justify;
+  margin: 0 auto;
+  font-size: 0.8rem;
+}
+
+.summary h2,
+.instructions h2{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.summary-text  b, a{
+  font-size: inherit;
+  color: inherit;
+}
+
+a:hover, a:active{
+  color: #8B5E3C;
+}
+
+
+.ingredients-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.ingredient-box {
+  height: auto;
+  width: 22%;
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px #4E342E;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.ingredient-box img{
+  height: 10vmin;
+  width: 95%;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ingredient-box h4{
+  font-size: 0.7rem;
+}
+
+.ingredient-box p{
+  font-size: 0.65rem;
+}
+
+.footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1 1 300px;
+  margin: 1rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #10B981;
+  margin-bottom: 0.75rem;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.social-icons a {
+  margin-right: 0.75rem;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
