@@ -3,7 +3,6 @@
 [![GitHub Stars](https://img.shields.io/github/stars/raogaurav17/recipe-pedia?style=social)](https://github.com/raogaurav17/recipe-pedia)
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![API](https://img.shields.io/badge/API-Spoonacular-orange)
-[![Deploy on Netlify](https://img.shields.io/badge/Live%20Demo-Netlify-success?logo=netlify)](https://your-netlify-app-url.netlify.app/)
 
 **Recipe-Pedia** is a modern and responsive **React** application that allows users to effortlessly search, discover, and explore thousands of recipes from around the world. Powered by the [Spoonacular API](https://spoonacular.com/food-api), the app delivers detailed information including ingredients, preparation steps, and summaries — all within an elegant user interface.
 
